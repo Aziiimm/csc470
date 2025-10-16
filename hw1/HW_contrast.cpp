@@ -38,7 +38,7 @@ void HW_contrast(ImagePtr I1, double brightness, double contrast, ImagePtr I2) {
     for (int ch = 0; IP_getChannel(I1, ch, p1, type); ch++) {
         IP_getChannel(I2, ch, p2, type);
         for (int i = 0; i < total; i++) {
-            *p2++ = (uchar) lut[*p1++];
+            *p2++ = (uchar)lut[*p1++];
         }
     }
 }

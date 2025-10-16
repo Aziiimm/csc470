@@ -27,7 +27,7 @@ void HW_clip(ImagePtr I1, int t1, int t2, ImagePtr I2) {
     if (t2 > MaxGray) t2 = MaxGray;
 
     // swap t1 and t2 if t1 is larger
-    if (t1 > t2) { 
+    if (t1 > t2) {
         int temp = t1; t1 = t2; t2 = temp;
     }
 
@@ -46,7 +46,7 @@ void HW_clip(ImagePtr I1, int t1, int t2, ImagePtr I2) {
     for (int ch = 0; IP_getChannel(I1, ch, p1, type); ch++) {
         IP_getChannel(I2, ch, p2, type);
         for (int i = 0; i < total; i++) {
-            *p2++ = (uchar) lut[*p1++];
+            *p2++ = (uchar)lut[*p1++];
         }
     }
 }
